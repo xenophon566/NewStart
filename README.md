@@ -1,6 +1,6 @@
 你好，在下是`凱`，接下來就由我來為你介紹這個專案哦~
 
-![kei_fly](https://www.careline.com.tw/assets/branding/images/about_us/webelieve/fly_kei.png)
+![kei_fly](/assets/imgaes/kei_fly.png)
 
 ### Q:那這個專案在做什麼的呢?
 
