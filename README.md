@@ -52,7 +52,7 @@ A: 我是凱，熱愛生活、旅行與美食，身型雖然很小，但冒險�
 
 A: 我們在台灣與多家保險業者合作，幫你找出最合適的保障
  - 目前推出的險種可參考我們[首頁](https://www.careline.com.tw/)
- - 想暸解團隊及公司的故事，可參考[關於我們](https://www.careline.com.tw/aboutus/)
+ - 想暸解我們的團隊故事，可參考[關於我們](https://www.careline.com.tw/aboutus/)
  
 <br/>
 
