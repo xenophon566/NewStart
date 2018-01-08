@@ -9,4 +9,6 @@ export class AppComponent {
   title = 'Tour of Heroes';
 
   // routing....
+
+  // angular
 }
