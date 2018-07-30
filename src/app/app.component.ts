@@ -11,5 +11,5 @@ export class AppComponent {
         public messageService: MessageService
     ) { }
 
-    title = 'Tour of Heroes';
+    title = 'Careline - Tour of Heroes';
 }
