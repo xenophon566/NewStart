@@ -31,6 +31,7 @@ body {
     padding: 1%;
 }
 
+// width ≥ 992px [RWD-1]
 @media (min-width: 992px) {
     .hero-link {
         flex: 0 0 25%;

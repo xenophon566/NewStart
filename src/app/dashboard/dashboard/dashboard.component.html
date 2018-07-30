@@ -1,6 +1,9 @@
 <h3>Top Heroes</h3>
+<!-- RWD container-fluid -->
 <div class="grid grid-pad container-fluid">
+    <!-- RWD row -->
     <div class="row">
+        <!-- RWD hero-link -->
         <a *ngFor="let hero of heroes" class="hero-link" routerLink="/detail/{{hero.id}}">
             <div class="module hero">
                 <h4>{{hero.name}}</h4>
