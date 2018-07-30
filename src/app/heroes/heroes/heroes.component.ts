@@ -20,7 +20,8 @@ export class HeroesComponent implements OnInit {
     getHeroes(): void {
         this.heroService.getHeroes().subscribe(heroes => {
             this.heroes = heroes;
-            this.count = this.heroes.length - 1;
+            this.count = this.heroes.length - 1; // Heroes count
+            document.getElementById("heroQty").innerHTML = this.count;
         });
     }
 
@@ -29,14 +30,16 @@ export class HeroesComponent implements OnInit {
         if (!name) { return; }
         this.heroService.addHero({ name } as Hero).subscribe(hero => {
             this.heroes.push(hero);
-            this.count = this.heroes.length - 1;
+            this.count = this.heroes.length - 1; // Heroes count
+            document.getElementById("heroQty").innerHTML = this.count;
         });
     }
 
     delete(hero: Hero): void {
         this.heroes = this.heroes.filter(h => h !== hero);
         this.heroService.deleteHero(hero).subscribe(() => {
-            this.count = this.heroes.length - 1;
+            this.count = this.heroes.length - 1; // Heroes count
+            document.getElementById("heroQty").innerHTML = this.count;
         });
     }
 
