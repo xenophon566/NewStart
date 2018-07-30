@@ -39,6 +39,7 @@ body {
     }
 }
 
+// width ≥ 768px [RWD-2]
 @media (max-width: 991px) and (min-width: 768px) {
     .hero-link {
         flex: 0 0 50%;
