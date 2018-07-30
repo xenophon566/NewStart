@@ -1,0 +1,97 @@
+// position
+%position-relative {
+    @include position(relative, 0 null null 0);
+}
+
+%position-absolute {
+    @include position(absolute, 0 null null 0);
+}
+
+// display
+%flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+%display-flex {
+    display: flex;
+    @extend %flex-center;
+}
+
+%display-inline-flex {
+    display: inline-flex;
+    @extend %flex-center;
+}
+
+// border solid
+%border-solid {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $rgba-black;
+}
+
+// border round
+%border-round {
+    border-width: 0;
+    border-style: solid;
+    border-color: $rgba-black;
+}
+
+%border-round4 {
+    border-radius: 4px;
+    @extend %border-round;
+}
+
+%border-round8 {
+    border-radius: 8px;
+    @extend %border-round;
+}
+
+%border-radius {
+    border-radius: 50%;
+    @extend %border-round;
+}
+
+// font
+%font-small {
+    font-size: $font_small;
+    font-weight: 500;
+}
+
+%font-inherit {
+    font-size: $font_inherit;
+    font-weight: 500;
+}
+
+%font-initial {
+    font-size: $font_initial;
+    font-weight: 500;
+}
+
+%font-large {
+    font-size: $font_large;
+    font-weight: 500;
+}
+
+// background
+%bg {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+%bg-cover {
+    background-size: cover;
+    @extend %bg;
+}
+
+%bg-contain {
+    background-size: contain;
+    @extend %bg;
+}
+
+// other
+%mat-header-cell {
+    flex: none;
+    overflow: hidden;
+    word-wrap: break-word;
+}

@@ -1,0 +1,107 @@
+/* my-border function */
+
+@mixin my-border ($border: null, $argus: null) {
+    @if $border !=null {
+        @extend %#{$border};
+    }
+    @else {
+        @extend %border-solid;
+    }
+    @if type_of($argus)=='map' {
+        @include _styleMixin(border, $argus);
+    }
+}
+
+
+/* my-font function */
+
+@mixin my-font ($font: null, $argus: null) {
+    @if $font !=null {
+        @extend %#{$font};
+    }
+    @else {
+        @extend %font-inherit;
+    }
+    @if type_of($argus)=='map' {
+        @include _styleMixin(font, $argus);
+    }
+}
+
+
+/* my-background function */
+
+@mixin my-background ($background: null, $argus: null) {
+    @if $background !=null {
+        @extend %#{$background};
+    }
+    @else {
+        @extend %bg-cover;
+    }
+    @if type_of($argus)=='map' {
+        @include _styleMixin(background, $argus);
+    }
+}
+
+
+/* my-position function */
+
+@mixin my-position ($position: null, $argus: null) {
+    @extend %position-#{$position};
+    @if type_of($argus)=='map' {
+        @include _positionMixin($position, $argus);
+    }
+}
+
+
+/* my-display function */
+
+@mixin my-display ($display: null, $argus: null) {
+    @extend %display-#{$display};
+    @if type_of($argus)=='map' {
+        @include _displayMixin($display, $argus);
+    }
+}
+
+
+/* _styleMixin function */
+
+@mixin _styleMixin ($style: null, $argus: null) {
+    @if not not $style and not not $argus {
+        @if type_of($argus)=='map' {
+            @each $i in map-keys($argus) {
+                #{$style}-#{$i}: map-get($argus, $i);
+            }
+        }
+        @else {
+            #{$style}: $argus;
+        }
+    }
+}
+
+
+/* _positionMixin function */
+
+@mixin _positionMixin ($position: null, $argus: null) {
+    @if not not $position {
+        position: #{$position};
+        @if not not $argus {
+            @each $i in map-keys($argus) {
+                #{$i}: map-get($argus, $i);
+            }
+        }
+    }
+}
+
+
+/* _displayMixin function */
+
+@mixin _displayMixin ($display: null, $argus: null) {
+    @if not not $display {
+        display: #{$display};
+        @if not not $argus {
+            @each $i in map-keys($argus) {
+                #{$i}: map-get($argus, $i);
+            }
+        }
+    }
+}

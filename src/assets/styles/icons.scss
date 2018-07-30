@@ -1,0 +1,74 @@
+.ic-btn {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ic-language {
+    background-image: url('../icons/language.svg');
+}
+
+.ic-reset {
+    background-image: url('../icons/reset.svg');
+}
+
+.ic-up {
+    background-image: url('../icons/up.svg');
+}
+
+.ic-down {
+    background-image: url('../icons/down.svg');
+}
+
+.ic-left {
+    background-image: url('../icons/left.svg');
+}
+
+.ic-right {
+    background-image: url('../icons/right.svg');
+}
+
+.ic-right-w {
+    background-image: url('../icons/right_w.svg');
+}
+
+.ic-edit {
+    background-image: url('../icons/edit.svg');
+}
+
+.ic-cancel {
+    background-image: url('../icons/cancel.svg');
+}
+
+.ic-remove {
+    background-image: url('../icons/remove.svg');
+}
+
+.ic-delete {
+    background-image: url('../icons/delete.svg');
+}
+
+@mixin mat-icon($mode: null) {
+    @if $mode=='dark' {
+        .ic-language {
+            background-image: url('../icons/language_w.svg');
+        }
+        .ic-up {
+            background-image: url('../icons/up_w.svg');
+        }
+        .ic-down {
+            background-image: url('../icons/down_w.svg');
+        }
+        .ic-left {
+            background-image: url('../icons/left_w.svg');
+        }
+        .ic-right {
+            background-image: url('../icons/right_w.svg');
+        }
+        .ic-reset {
+            background-image: url('../icons/reset_w.svg');
+        }
+    }
+}
+
+// @include mat-icon('dark');
+@include mat-icon();

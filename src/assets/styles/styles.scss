@@ -1,0 +1,53 @@
+@import 'modules/_importer';
+@import 'partials/_importer';
+@import 'layouts/_importer';
+@import 'components/_importer';
+@import 'vendor/_importer';
+
+body {
+    width: 96%;
+    margin: 2% auto 0;
+}
+
+.title,
+.nav,
+.search-component,
+.detail-component,
+.heroes-component,
+.messages-style {
+    padding: 1%;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero-link {
+    padding: 1%;
+}
+
+@media (min-width: 992px) {
+    .hero-link {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .hero-link {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-link {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
