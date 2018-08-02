@@ -5,7 +5,7 @@
 <nav class="nav">
     <a routerLink="/cl-dashboard">Dashboard</a>
     <a routerLink="/cl-heroes">
-        <span id="heroQty"></span> Heroes
+        <span> {{ count$ | async }} </span> Heroes
     </a>
 </nav>
 

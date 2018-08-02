@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { MessageService } from './message.service';
+import { HeroService } from './hero.service';
 
 @Component({
     selector: 'app-root',
@@ -8,8 +10,12 @@ import { MessageService } from './message.service';
 })
 export class AppComponent {
     constructor(
-        public messageService: MessageService
+        public messageService: MessageService,
+        public heroService: HeroService
     ) { }
 
+    count$: Observable<number> = this.heroService.count$;
+
     title = 'Careline - Tour of Heroes';
+
 }

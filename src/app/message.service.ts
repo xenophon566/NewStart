@@ -8,7 +8,7 @@ export class MessageService {
         this.messages.push(message);
     }
 
-    clear(qty: 0) {
+    clear(qty: any = 0) {
         if (confirm('Do you really want to clear?')) {
             if (!!qty) for (let i = 0; i < qty; i++) this.messages.shift();
             else this.messages = [];
